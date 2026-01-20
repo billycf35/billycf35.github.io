@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tools Ecosystem Architecture | Billy Cristian Fauji</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#007fff",
+                        "background-light": "#ffffff",
+                        "background-dark": "#17191c",
+                        "panel-dark": "#1b2128",
+                        "border-dark": "#394756",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .grid-bg {
+            background-image: radial-gradient(circle, #27303a 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .connection-line {
+            position: absolute;
+            background-color: #007fff;
+            opacity: 0.4;
+            z-index: 0;
+        }
+        .connection-line.vertical { width: 1px; }
+        .connection-line.horizontal { height: 1px; }
+        .node-box {
+            position: relative;
+            z-index: 10;
+            transition: all 0.2s ease;
+        }
+        .node-box:hover {
+            border-color: #007fff;
+            box-shadow: 0 0 15px rgba(0, 127, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white selection:bg-primary/30">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-dark/50 bg-background-dark/80 backdrop-blur-md px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-2xl">architecture</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight">Billy Cristian Fauji</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white/70 hover:text-white text-sm font-medium transition-colors" href="#">Architecture</a>
+<a class="text-white/70 hover:text-white text-sm font-medium transition-colors" href="#">Projects</a>
+<a class="text-white/70 hover:text-white text-sm font-medium transition-colors" href="#">About</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-all">
+<span>Contact</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex flex-col">
+<!-- Page Heading Section -->
+<div class="max-w-[1200px] mx-auto w-full px-10 pt-12 pb-8">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="max-w-2xl">
+<h1 class="text-white text-5xl font-black leading-tight tracking-tighter mb-4">Tools Ecosystem Architecture</h1>
+<p class="text-[#9aabbc] text-lg font-normal leading-relaxed">
+                            Tools are extensions of logic. I don't just use them; I orchestrate them into self-sustaining systems. This map visualizes the structural relationship between my core technologies.
+                        </p>
+</div>
+<div class="flex gap-4 mb-2">
+<div class="flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/30 rounded text-xs text-primary font-bold uppercase tracking-widest">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                            System Live
+                        </div>
+</div>
+</div>
+</div>
+<!-- The Blueprint Canvas -->
+<div class="relative w-full flex-1 min-h-[700px] grid-bg border-t border-border-dark/30">
+<!-- Abstract Connection Lines (Simulated Architecture) -->
+<!-- Infrastructure to Logic -->
+<div class="connection-line horizontal top-[300px] left-[320px] w-[140px]"></div>
+<!-- Logic to Data -->
+<div class="connection-line horizontal top-[300px] left-[740px] w-[140px]"></div>
+<!-- AI to Logic -->
+<div class="connection-line vertical top-[450px] left-[600px] h-[100px]"></div>
+<div class="max-w-[1200px] mx-auto relative h-full p-10">
+<!-- 1. Infrastructure Cluster -->
+<div class="absolute top-20 left-10 w-72">
+<div class="flex items-center gap-2 mb-6 text-primary/80">
+<span class="material-symbols-outlined text-xl">settings_input_component</span>
+<h3 class="text-sm font-bold uppercase tracking-[0.2em]">01. Infrastructure &amp; OS</h3>
+</div>
+<div class="flex flex-col gap-3">
+<div class="node-box flex items-center justify-between gap-3 rounded border border-border-dark bg-panel-dark p-4 group">
+<span class="text-white text-sm font-bold tracking-tight">Linux (Arch/Debian)</span>
+<span class="material-symbols-outlined text-sm text-[#9aabbc] group-hover:text-primary transition-colors">terminal</span>
+</div>
+<div class="node-box flex items-center justify-between gap-3 rounded border border-border-dark bg-panel-dark p-4 group">
+<span class="text-white text-sm font-bold tracking-tight">Docker Engine</span>
+<span class="material-symbols-outlined text-sm text-[#9aabbc] group-hover:text-primary transition-colors">token</span>
+</div>
+<div class="node-box flex items-center justify-between gap-3 rounded border border-border-dark bg-panel-dark p-4 group">
+<span class="text-white text-sm font-bold tracking-tight">Proxmox Virtualization</span>
+<span class="material-symbols-outlined text-sm text-[#9aabbc] group-hover:text-primary transition-colors">layers</span>
+</div>
+</div>
+</div>
+<!-- 2. Logic & Automation Cluster (Center) -->
+<div class="absolute top-20 left-[460px] w-72">
+<div class="flex items-center gap-2 mb-6 text-primary/80">
+<span class="material-symbols-outlined text-xl">account_tree</span>
+<h3 class="text-sm font-bold uppercase tracking-[0.2em]">02. Logic &amp; Automation</h3>
+</div>
+<div class="flex flex-col gap-3">
+<div class="node-box flex items-center justify-between gap-3 rounded border border-border-dark bg-panel-dark p-4 group">
+<span class="text-white text-sm font-bold tracking-tight">Python Engine</span>
+<span class="material-symbols-outlined text-sm text-[#9aabbc] group-hover:text-primary transition-colors">code</span>
+</div>
+<div class="node-box flex items-center justify-between gap-3 rounded border border-border-dark bg-panel-dark p-4 group">
+<span class="text-white text-sm font-bold tracking-tight">Node.js Runtime</span>
+<span class="material-symbols-outlined text-sm text-[#9aabbc] group-hover:text-primary transition-colors">javascript</span>
+</div>
+<div class="node-box flex items-center justify-between gap-3 rounded border border-border-dark bg-panel-dark p-4 group">
+<span class="text-white text-sm font-bold tracking-tight">n8n Workflow Automation</span>
+<span class="material-symbols-outlined text-sm text-[#9aabbc] group-hover:text-primary transition-colors">schema</span>
+</div>
+<div class="node-box flex items-center justify-between gap-3 rounded border border-border-dark bg-panel-dark p-4 group">
+<span class="text-white text-sm font-bold tracking-tight">Custom API Gateways</span>
+<span class="material-symbols-outlined text-sm text-[#9aabbc] group-hover:text-primary transition-colors">api</span>
+</div>
+</div>
+</div>
+<!-- 3. Data & Persistence Cluster -->
+<div class="absolute top-20 left-[880px] w-72">
+<div class="flex items-center gap-2 mb-6 text-primary/80">
+<span class="material-symbols-outlined text-xl">database</span>
+<h3 class="text-sm font-bold uppercase tracking-[0.2em]">03. Data &amp; Persistence</h3>
+</div>
+<div class="flex flex-col gap-3">
+<div class="node-box flex items-center justify-between gap-3 rounded border border-border-dark bg-panel-dark p-4 group">
+<span class="text-white text-sm font-bold tracking-tight">PostgreSQL</span>
+<span class="material-symbols-outlined text-sm text-[#9aabbc] group-hover:text-primary transition-colors">storage</span>
+</div>
+<div class="node-box flex items-center justify-between gap-3 rounded border border-border-dark bg-panel-dark p-4 group">
+<span class="text-white text-sm font-bold tracking-tight">Redis Cache</span>
+<span class="material-symbols-outlined text-sm text-[#9aabbc] group-hover:text-primary transition-colors">memory</span>
+</div>
+<div class="node-box flex items-center justify-between gap-3 rounded border border-border-dark bg-panel-dark p-4 group">
+<span class="text-white text-sm font-bold tracking-tight">Odoo Logic</span>
+<span class="material-symbols-outlined text-sm text-[#9aabbc] group-hover:text-primary transition-colors">business_center</span>
+</div>
+</div>
+</div>
+<!-- 4. AI-Assisted Workflows Cluster -->
+<div class="absolute bottom-20 left-[460px] w-72">
+<div class="flex items-center gap-2 mb-6 text-primary/80">
+<span class="material-symbols-outlined text-xl">psychology</span>
+<h3 class="text-sm font-bold uppercase tracking-[0.2em]">04. AI Integration</h3>
+</div>
+<div class="flex flex-col gap-3">
+<div class="node-box flex items-center justify-between gap-3 rounded border border-border-dark bg-panel-dark p-4 group">
+<span class="text-white text-sm font-bold tracking-tight">OpenAI / Anthropic APIs</span>
+<span class="material-symbols-outlined text-sm text-[#9aabbc] group-hover:text-primary transition-colors">model_training</span>
+</div>
+<div class="node-box flex items-center justify-between gap-3 rounded border border-border-dark bg-panel-dark p-4 group">
+<span class="text-white text-sm font-bold tracking-tight">Vector / Embedding DBs</span>
+<span class="material-symbols-outlined text-sm text-[#9aabbc] group-hover:text-primary transition-colors">hub</span>
+</div>
+</div>
+</div>
+<!-- Floating Performance Stats (Modified Stats Component) -->
+<div class="absolute bottom-10 right-10 flex flex-col gap-4">
+<div class="flex items-center gap-6 rounded bg-background-dark/60 border border-border-dark/50 backdrop-blur p-4">
+<div class="flex flex-col gap-1">
+<p class="text-[#9aabbc] text-[10px] font-bold uppercase tracking-widest">System Uptime</p>
+<p class="text-white text-xl font-black">99.98%</p>
+</div>
+<div class="w-px h-8 bg-border-dark/50"></div>
+<div class="flex flex-col gap-1">
+<p class="text-[#9aabbc] text-[10px] font-bold uppercase tracking-widest">Automation</p>
+<p class="text-white text-xl font-black">85%</p>
+</div>
+<div class="w-px h-8 bg-border-dark/50"></div>
+<div class="flex flex-col gap-1">
+<p class="text-[#9aabbc] text-[10px] font-bold uppercase tracking-widest">Throughput</p>
+<p class="text-white text-xl font-black">1.2 GB/s</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Workflow Summary / Persistence Layer (Modified Timeline) -->
+<div class="bg-background-dark border-t border-border-dark/30 py-16">
+<div class="max-w-[960px] mx-auto px-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-white text-2xl font-bold mb-6">Orchestration Philosophy</h2>
+<div class="grid grid-cols-[40px_1fr] gap-x-4">
+<div class="flex flex-col items-center gap-1 pt-3">
+<div class="text-primary">
+<span class="material-symbols-outlined">dns</span>
+</div>
+<div class="w-[1.5px] bg-border-dark h-8 grow"></div>
+</div>
+<div class="flex flex-1 flex-col py-3">
+<p class="text-white text-base font-medium">Bare Metal to Cloud</p>
+<p class="text-[#9aabbc] text-sm leading-relaxed">Infrastructure is code. Every service runs in a predictable, reproducible environment.</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-[1.5px] bg-border-dark h-8"></div>
+<div class="text-primary">
+<span class="material-symbols-outlined">auto_fix_high</span>
+</div>
+<div class="w-[1.5px] bg-border-dark h-8 grow"></div>
+</div>
+<div class="flex flex-1 flex-col py-3">
+<p class="text-white text-base font-medium">Logic Autonomy</p>
+<p class="text-[#9aabbc] text-sm leading-relaxed">Automation layers bridge the gap between static data and actionable insights.</p>
+</div>
+<div class="flex flex-col items-center gap-1 pb-3">
+<div class="w-[1.5px] bg-border-dark h-8"></div>
+<div class="text-primary">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col py-3">
+<p class="text-white text-base font-medium">Data Integrity</p>
+<p class="text-[#9aabbc] text-sm leading-relaxed">High-performance persistence ensures no bit is lost, no matter the scale.</p>
+</div>
+</div>
+</div>
+<div class="bg-panel-dark border border-border-dark p-8 rounded-xl relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"></div>
+<h3 class="text-white text-lg font-bold mb-4">The Result: Zero-Touch Ops</h3>
+<p class="text-[#9aabbc] text-base leading-relaxed mb-6">
+                                By mapping these connections, I eliminate manual bottlenecks. My current stack handles over 2.5M AI tokens daily and coordinates dozens of microservices with minimal human intervention.
+                            </p>
+<button class="flex items-center gap-2 text-primary font-bold text-sm hover:gap-4 transition-all">
+                                VIEW LOGIC FLOW <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="border-t border-border-dark/30 bg-background-dark py-8 px-10">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center text-[#9aabbc] text-xs font-medium uppercase tracking-widest">
+<div>© 2024 Billy Cristian Fauji</div>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">GitHub</a>
+<a class="hover:text-white transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-white transition-colors" href="#">Terminal</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
